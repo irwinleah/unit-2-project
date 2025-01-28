@@ -28,10 +28,15 @@
         <p>Photo:
             <%= item.photo %>
         </p>
-        <!-- <form action="/flowers/<%= item._id %>/like" method="POST">
-            <button type="submit">Like</button>
-        </form>
-        <span id="like-count"><%= item.likes.length %></span> likes -->
+    <form action="/users/<%= member._id %>/flowers/<%= item._id %>/like" method="POST">
+        <button type="submit"><%= item.likes.includes(user._id) ? "unlike" : "like" %></button>
+    </form>
+    <span id="like-count"><%= item.likes.length %></span> likes
+
+    <form action="/users/<%= member._id %>/flowers/<%= item._id %>/comment" method="POST">
+        <button type="submit"><%= item.comments.includes(user._id) ? "uncomment" : "comment" %></button>
+    </form>
+    <span id="comment-count"><%= item.comments.length %></span> comments
         
 <% if (user._id == member._id) { %>
     <form action="/users/<%= user._id %>/flowers/<%= item._id %>?_method=DELETE" method="POST">

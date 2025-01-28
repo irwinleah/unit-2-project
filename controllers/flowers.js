@@ -25,7 +25,7 @@ router.put('/:flowerId', async function (req, res) {
         const currentUser = await UserModel.findById(req.session.user._id)
         const flower = currentUser.flowerBed.id(req.params.flowerId)
         flower.set(req.body)
-        console.log(req.body)
+
         await currentUser.save()
         res.redirect(`/users/${currentUser._id}/flowers/${flower._id}`)
     } catch (err) {
@@ -38,7 +38,6 @@ router.get('/:flowerId/edit', async function (req, res) {
     try {
         const currentUser = await UserModel.findById(req.session.user._id)
         const flower = currentUser.flowerBed.id(req.params.flowerId)
-        console.log(flower)
         res.render('flowers/edit.ejs', {
             flower: flower
         })
@@ -62,14 +61,11 @@ router.delete('/:flowerId', async function (req, res) {
     }
 });
 
-router
-
 router.post('/', async (req, res) => {
     try {
         const currentUser = await UserModel.findById(req.session.user._id)
         currentUser.flowerBed.push(req.body)
         await currentUser.save()
-        console.log(currentUser.flowerBed)
         res.redirect(`/users/${currentUser._id}/flowers`)
     } catch (error) {
         console.log(error)

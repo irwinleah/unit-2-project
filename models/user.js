@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
 
-
+const commentsSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }, 
+    text: {
+        type: String,
+        required: true,
+    }
+})
 
 const flowerSchema = new mongoose.Schema({
     commonName: {
@@ -30,7 +39,8 @@ const flowerSchema = new mongoose.Schema({
     likes: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
-    }]
+    }],
+    comments: [commentsSchema]
 });
 
 const userSchema = mongoose.Schema({

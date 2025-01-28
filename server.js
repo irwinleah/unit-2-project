@@ -10,7 +10,7 @@ const session = require('express-session');
 const authController = require('./controllers/auth.js');
 const flowersController = require('./controllers/flowers.js');
 const usersController = require('./controllers/users.js')
-// const Flower = require('./models/user.js')
+
 
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
@@ -40,23 +40,6 @@ app.get('/', (req, res) => {
         user: req.session.user,
     });
 });
-
-// app.post('/flowers/:flowerId/like', async function(req, res) {
-//     try {
-//         const flower = await Flower.findById(req.params.id);
-//         const userId = req.user._id;
-
-//         if(!flower.likes.includes(userId)) {
-//             flower.likes.push(req.session.user._id );
-//             await flower.save();
-//         }
-//         res.redirect(`/flowers/${flower._id}`);
-//     } catch (err) {
-//         console.error(err);
-//         res.status(500).send('error liking flower!')
-//     }
-
-// })
 
 app.use(passUserToView);
 app.use('/auth', authController);
