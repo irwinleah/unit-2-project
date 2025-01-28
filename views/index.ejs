@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <%- include('./partials/_navbar') %>
+        <h1>Welcome to Flower Bed</h1>
+        <% if (user) { %>
+            <h2>Welcome, <%= user.username %>!</h2>
+            <p>
+                <a href="/auth/sign-out">Sign Out</a>
+            </p>
+            <% } else { %>
+                <h2>Welcome Guest</h2>
+                <p>
+                    <a href="/auth/sign-up">Sign Up</a> or
+                    <a href="/aut/sign-in">Sign In</a>.
+                </p>
+                <% } %>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar') %>
+        <h1>
+            <%= member.username %>'s Flower Bed
+        </h1>
+        <% member.flowerBed.forEach(item=> { %>
+            <div>
+            <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
+                <%= item.commonName %>
+            </a></div>
+            <% }) %>
+
+</body>
+
+</html>

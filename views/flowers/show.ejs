@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <%- include('../partials/_navbar') %>
+        
+        <h1> 
+            <%= item.commonName %>
+        </h1>
+        <p>Scientific Name:
+            <%= item.scientificName %>
+        </p>
+        <p>Date Found:
+            <%= item.dateFound.toString().slice(0, 15) %>
+        </p>
+        <p>Location:
+            <%= item.location %>
+        </p>
+        <p>Field Notes:
+            <%= item.fieldNotes %>
+        </p>
+        <p>Photo:
+            <%= item.photo %>
+        </p>
+        <!-- <form action="/flowers/<%= item._id %>/like" method="POST">
+            <button type="submit">Like</button>
+        </form>
+        <span id="like-count"><%= item.likes.length %></span> likes -->
+        
+<% if (user._id == member._id) { %>
+    <form action="/users/<%= user._id %>/flowers/<%= item._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Flower</button>
+    </form>
+    <a href="/users/<%= user._id %>/flowers/<%= item._id %>/edit">
+        <button>Edit Flower</button>
+    </a>
+<% } %>
+
+
+
+</body>
+
+</html>

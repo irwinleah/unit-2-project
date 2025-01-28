@@ -1,0 +1,13 @@
+<nav>
+    <a href="/">Home</a>
+    <% if(user) { %>
+        <a href="/users/<%=user._id%>/flowers">View my Flower Bed</a>
+        <a href="/auth/sign-out">Sign Out</a>
+        <a href="/users">Flower Bed Community</a>
+        <% } else { %>
+            <a href="/auth/sign-in">Sign In</a>
+            <a href="/auth/sign-up">Sign Up</a>
+            <a href="/users">Flower Bed Community</a>
+
+            <% } %>
+</nav>

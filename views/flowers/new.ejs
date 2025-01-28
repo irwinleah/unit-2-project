@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Flower</title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar') %>
+
+    <h1>Add A New Flower</h1>
+
+        <form action="/users/<%= user._id %>/flowers/" method="POST">
+            <label for="name">Common Name:</label>
+            <input type="text" name="commonName" id="commonName" />
+            <label for="name">Scientific Name:</label>
+            <input type="text" name="scientificName" id="scientificName" />
+            <label for="name">Date Found:</label>
+            <input type="date" name="dateFound" id="dateFound" />
+            <label for="name">Location:</label>
+            <input type="text" name="location" id="location" />
+            <label for="name">Field Notes:</label>
+            <input type="text" name="fieldNotes" id="fieldNotes" />
+            <label for="name">Photo:</label>
+            <input type="text" name="photo" id="photo" />
+            <button type="submit">Add Flower</button>
+        </form>
+</body>
+
+</html>
