@@ -57,7 +57,7 @@ router.delete('/:flowerId', async function (req, res) {
 
     } catch (err) {
         console.log(err)
-        res.send('Error deleting food, click terminal!')
+        res.send('Error deleting flowers, click terminal!')
     }
 });
 

@@ -9,6 +9,7 @@ const commentsSchema = new mongoose.Schema({
         type: String,
         required: true,
     }
+
 })
 
 const flowerSchema = new mongoose.Schema({
@@ -40,7 +41,7 @@ const flowerSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }],
-    comments: [commentsSchema]
+    commentBox: [commentsSchema]
 });
 
 const userSchema = mongoose.Schema({

@@ -21,11 +21,14 @@ router.get('/:userId', async function (req, res) {
 
 router.get('/:userId/flowers/:flowerId', async function (req, res) {
     try {
-        const member = await UserModel.findById(req.params.userId)
+        const member = await UserModel.findById(req.params.userId).populate({path: 'flowerBed', populate: {path: 'commentBox', populate: {path: 'user'}}})
         const flower = member.flowerBed.id(req.params.flowerId)
+        const comments = flower.commentBox
+        
         res.render('flowers/show.ejs', {
             item: flower,
-            member: member
+            member: member,
+            comments: comments
         })
     } catch (err) {
         console.log(err)
@@ -55,14 +58,11 @@ router.post('/:userId/flowers/:flowerId/like', async function(req, res) {
 router.post('/:userId/flowers/:flowerId/comment', async function(req, res) {
     try {
         const member = await UserModel.findById(req.params.userId)
-        const flower = member.flowerBed.id(req.params.flowerId)
-
-        if(!flower.comments.includes(req.body.user._id)) {
-            console.log("blahhh")
-            member.flower.comments.push(req.body.user._id);
-        } else {
-            flower.comments.remove(req.body.user._id)
-        }
+        const flower = member.flowerBed.id(req.params.flowerId) //commentBox was flowerbed
+        const comment = req.body
+        comment.user = req.session.user._id
+        console.log(comment)
+        flower.commentBox.push(comment)
         await member.save();
         res.redirect(`/users/${member._id}/flowers/${flower._id}`);
     } catch (err) {
@@ -70,6 +70,21 @@ router.post('/:userId/flowers/:flowerId/comment', async function(req, res) {
         res.status(500).send('error commenting on flower!')
     }
 
+})
+
+router.delete('/:userId/flowers/:flowerId/comment/:commentId', async function (req, res){
+    try {
+        const member = await UserModel.findById(req.params.userId)
+        const flower = member.flowerBed.id(req.params.flowerId)
+        console.log(flower)
+        flower.commentBox.id(req.params.commentId).deleteOne()
+        await member.save()
+        res.redirect(`/users/${member._id}/flowers/${flower._id}`);
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).send('error deleting comment on flower!')
+    }
 })
 
 module.exports = router;

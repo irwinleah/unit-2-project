@@ -34,9 +34,21 @@
     <span id="like-count"><%= item.likes.length %></span> likes
 
     <form action="/users/<%= member._id %>/flowers/<%= item._id %>/comment" method="POST">
-        <button type="submit"><%= item.comments.includes(user._id) ? "uncomment" : "comment" %></button>
+        text: <input id="text" name="text"/>
+        <button type="submit">Add Comment</button>
     </form>
-    <span id="comment-count"><%= item.comments.length %></span> comments
+    <span id="comment-count"><%= item.commentBox.length %></span> comments
+    <% comments.forEach(comment => { %>
+        <div>
+        <p><%= comment.user.username %> Says:</p>
+        <p><%= comment.text %></p>
+        <% if (comment.user._id == user._id) { %>
+            <form action="/users/<%= member._id %>/flowers/<%= item._id %>/comment/<%= comment._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete Comment</button>
+            </form>
+        <% } %>
+        </div>
+    <% }) %>
         
 <% if (user._id == member._id) { %>
     <form action="/users/<%= user._id %>/flowers/<%= item._id %>?_method=DELETE" method="POST">
