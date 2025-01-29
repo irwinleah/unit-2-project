@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= member.username %>'s Flower Bed</title>
 </head>
 
 <body>
@@ -14,9 +14,10 @@
         </h1>
         <% member.flowerBed.forEach(item=> { %>
             <div>
-            <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
-                <%= item.commonName %>
-            </a></div>
+                <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
+                    <%= item.commonName %>
+                </a>
+            </div>
             <% }) %>
 
 </body>

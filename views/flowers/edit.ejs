@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editing</title>
+    <title>Editing <%= flower.commonName %></title>
 </head>
 
 <body>
@@ -18,15 +18,14 @@
             <label for="name">Scientific Name:</label>
             <input type="text" name="scientificName" id="scientificName" value="<%= flower.scientificName %>" />
             <label for="name">Date Found:</label>
-            <input type="date" name="dateFound" id="dateFound" value="<%= flower.dateFound.toISOString().slice(0, 10) %>" />
+            <input type="date" name="dateFound" id="dateFound"
+                value="<%= flower.dateFound.toISOString().slice(0, 10) %>" />
             <label for="name">Location:</label>
             <input type="text" name="location" id="location" value="<%= flower.location %>" />
             <label for="name">Field Notes:</label>
             <input type="text" name="fieldNotes" id="fieldNotes" value="<%= flower.fieldNotes %>" />
             <label for="name">Photo:</label>
             <input type="text" name="photo" id="photo" value="<%= flower.photo %>" />
-
-
             <button type="submit">Edit Flower</button>
         </form>
 

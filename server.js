@@ -21,7 +21,7 @@ const port = process.env.PORT ? process.env.PORT : '3000';
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
-    console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
+    console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -38,7 +38,7 @@ app.use(
 app.get('/', (req, res) => {
     res.render('index.ejs', {
         user: req.session.user,
-    });
+    })
 });
 
 app.use(passUserToView);
@@ -48,5 +48,5 @@ app.use('/users/:userId/flowers', flowersController);
 app.use('/users', usersController);
 
 app.listen(port, () => {
-    console.log(`The express app is ready on port ${port}!`);
+    console.log(`The express app is ready on port ${port}!`)
 });
