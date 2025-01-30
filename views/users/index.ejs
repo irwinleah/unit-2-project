@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Flower Bed Community Members</title>
 </head>
 
@@ -12,10 +13,10 @@
     <%- include('../partials/_navbar') %>
         <h1>Flower Bed Community</h1>
         <% users.forEach(member=> { %>
-            <p>
+            <p class="members-name">
                 <%= member.username %>
             </p>
-            <a href="/users/<%= member._id %>">View Flower Bed</a>
+            <a class="view-users-flower-bed-link" href="/users/<%= member._id %>">View Flower Bed</a>
             <% }) %>
 </body>
 

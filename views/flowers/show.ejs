@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title><%= item.commonName %></title>
 </head>
 
 <body>
     <%- include('../partials/_navbar') %>
-
+    <div id="flower-info">
         <h1>
             <%= item.commonName %>
         </h1>
@@ -25,9 +26,13 @@
         <p>Field Notes:
             <%= item.fieldNotes %>
         </p>
+    </div>
+    <div id="flower-photo">
         <p>Photo:
             <%= item.photo %>
         </p>
+    </div>
+    <div id="flower-actions">
         <form action="/users/<%= member._id %>/flowers/<%= item._id %>/like" method="POST">
             <button type="submit">
                 <%= item.likes.includes(user._id) ? "unlike" : "like" %>
@@ -45,7 +50,7 @@
             <%= item.commentBox.length %>
         </span> comments
         <% comments.forEach(comment=> { %>
-            <div>
+            <div id="comment-text">
                 <p>
                     <%= comment.user.username %> Says:
                 </p>
@@ -70,6 +75,7 @@
                         <button>Edit Flower</button>
                     </a>
                     <% } %>
+    </div>
 
 
 

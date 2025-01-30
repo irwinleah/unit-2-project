@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Sign Up</title>
 </head>
 
-<body>
-    <h1>Create a new account! </h1>
-    <form action="/auth/sign-up" method="POST">
+<body class="sign-up-page">
+    <h1>Create a New Account! </h1>
+    <form class="sign-up-texts" action="/auth/sign-up" method="POST">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required />
         <label for="password">Password:</label>

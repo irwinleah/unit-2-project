@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Editing <%= flower.commonName %></title>
 </head>
 
@@ -12,6 +13,7 @@
 
         <h1>Edit <%= flower.commonName %>
         </h1>
+    <div>
         <form action="/users/<%= user._id %>/flowers/<%= flower._id %>?_method=PUT" method="POST">
             <label for="name">Common Name:</label>
             <input type="text" name="commonName" id="commonName" value="<%= flower.commonName %>" />
@@ -28,6 +30,7 @@
             <input type="text" name="photo" id="photo" value="<%= flower.photo %>" />
             <button type="submit">Edit Flower</button>
         </form>
+    </div>
 
 
 </body>

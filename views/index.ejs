@@ -4,25 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Home</title>
 </head>
 
-<body>
+<body class="index-body">
     <%- include('./partials/_navbar') %>
-        <h1>Welcome to Flower Bed</h1>
+    <div class="index-container">
+        <div class=text-container>
+        <h1 class="main-header">Welcome to Flower Bed</h1>
+        <p class="subheader">An app for collecting flowers</p>
+        </div>
+        <div class="auth-links">
         <% if (user) { %>
-            <h2>Welcome, <%= user.username %>!</h2>
-            <p>
-                <a href="/auth/sign-out">Sign Out</a>
-            </p>
+            <h2 class="second-header">Welcome, <%= user.username %>!</h2>
+            <!-- <p>
+                <a class="signout-link" href="/auth/sign-out">Sign Out</a>
+            </p> -->
             <% } else { %>
                 <h2>Welcome Guest</h2>
                 <p>
-                    <a href="/auth/sign-up">Sign Up</a> or
-                    <a href="/aut/sign-in">Sign In</a>.
+                    <a class="signup-link" href="/auth/sign-up">Sign Up</a> or
+                    <a class="signin-link" href="/aut/sign-in">Sign In</a>
                 </p>
                 <% } %>
-
+        </div>
+    </div>
+    
 </body>
 
 </html>
