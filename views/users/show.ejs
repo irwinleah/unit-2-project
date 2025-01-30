@@ -8,13 +8,14 @@
     <title><%= member.username %>'s Flower Bed</title>
 </head>
 
-<body>
-    <%- include('../partials/_navbar') %>
-        <h1>
+<%- include('../partials/_navbar') %>
+
+<body class="member-body">
+        <h1 class="member-page-header">
             <%= member.username %>'s Flower Bed
         </h1>
         <% member.flowerBed.forEach(item=> { %>
-            <div>
+            <div id="members-flower-links">
                 <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
                     <%= item.commonName %>
                 </a>

@@ -8,17 +8,19 @@
     <title>My Flower Bed</title>
 </head>
 
-<body>
-    <%- include('../partials/_navbar') %>
-        <h1>Welcome to my Flower Bed</h1>
+<%- include('../partials/_navbar') %>
+
+<body class="flower-index-body">
+        <h1 class="flower-index-header">Welcome to My Flower Bed</h1>
         <a class="new-flower-index-link" href="/users/<%= user._id %>/flowers/new">New Flower</a>
+        <div class="flower-linksss">
         <% flowerBed.forEach(item=> { %>
-            <div>
-                <a class="flower-links" href="/users/<%= user._id %>/flowers/<%= item._id %>">
+                <a class="flower-index-links" href="/users/<%= user._id %>/flowers/<%= item._id %>">
                     <%= item.commonName %>
                 </a>
-            </div>
-        <% }) %>
+                <% }) %>
+        </div>
+        <div></div>
 </body>
 
 </html>

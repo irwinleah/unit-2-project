@@ -9,9 +9,10 @@
 </head>
 
 
-<body>
-    <%- include('../partials/_navbar') %>
-        <h1>Flower Bed Community</h1>
+<%- include('../partials/_navbar') %>
+
+<body class="fbc-index-body">
+        <h1 class="fbc-header">Flower Bed Community</h1>
         <% users.forEach(member=> { %>
             <p class="members-name">
                 <%= member.username %>

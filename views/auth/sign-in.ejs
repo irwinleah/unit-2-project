@@ -8,14 +8,14 @@
     <title>Sign In</title>
 </head>
 
-<body class="sign-in-page">
-    <h1>Sign in </h1>
-    <form class="sign-in-texts" action="/auth/sign-in" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required />
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required />
-        <button type="submit">Sign in</button>
+<body id="sign-in-body">
+    <h1 id="sign-in-header">Welcome Back</h1>
+    <form action="/auth/sign-in" method="POST">
+        <label class="si-username-password-text" for="username">Username:</label>
+        <input class="si-text" type="text" name="username" id="username" required />
+        <label class="si-username-password-text" for="password">Password:</label>
+        <input class="si-text" type="password" name="password" id="password" required />
+        <button class="sign-in-button" type="submit">Sign in</button>
     </form>
 </body>
 

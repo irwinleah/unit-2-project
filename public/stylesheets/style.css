@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
 
 body {
-    background: rgb(1, 54, 100);
     font-family: "Joti One", serif;
     display: flex;
     flex-direction: column;
@@ -9,158 +8,425 @@ body {
     justify-content: center;
     max-width: 100vw;
     height: 100vh;
-  }
-  
-  h1 {
-    color: #f6faf9;
-    font-size: 3.6em;
-  }
-/* 
-  footer {
-    font-size: 0.7em;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-  } */
-/* 
-  .flower-pic1 {
-    height: 10%;
-  } */
-/* public/stylesheets/style.css */
+}
 
 .index-body {
-    background-image: url('https://imgur.com/tlqz13G.png?1');
+    background-image: url('https://i.imgur.com/EF078sz.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     width: 100vw;
     color: white;
-  }
-  
+}
 
-
-  .main-header {
-    font-weight: bold;
-    color: white;
-    font-size: 5.6em;
-    margin: -160px 20px 0 20px;
-  }
-  
-  .subheader {
-    margin: 0 20px 0 20px;
-    font-size: 1.4em;
-  }
-  
-  .index-container {
+#index-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-  }
-  
-  .auth-links {
+}
+
+.main-header {
+    font-weight: bold;
+    color: white;
+    font-size: 5.6em;
+    margin: -300px 20px 0 20px;
+}
+
+.subheader {
+    margin: 0 20px 0 20px;
+    font-size: 1.4em;
+}
+
+#auth-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 80px 0 0;
     height: 100%;
-  }
-  
-  .signup-link,
-  .signin-link {
+}
+
+.signup-link,
+.signin-link {
     text-decoration: none;
     font-size: 1.5em;
     padding: 8px 5px 8px 5px;
     border-radius: 5px;
     width: 10em;
     text-align: center;
-  }
-  
-  .signup-link {
-    background-color: #c3bc63;
+    background-color: #d1dc80;
     color: black;
-    margin: 0 0 20px 0;
-  }
-  
-  .signup-link:hover {
-    background-color: #634355;
+}
+
+.signup-link:hover, .signin-link:hover {
+    background-color: #8c475b;
     color: white;
-  }
-  
-  .signin-link {
-    background-color: #c3bc63;
-    color: black;
-    margin: 20px 0 0 0;
-  }
-  
-  .signin-link:hover {
-    background-color: #634355;
-    color: white;
-  }
-  
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
     max-width: 100vw;
     padding: 5px 20px;
     justify-content: space-between;
-    align-items: center;
-  }
-              
-  #nav-header {
-    color: #c3bc63;
+    align-content: flex-start;
+    text-decoration: underline;
+}
+
+#nav-header {
+    color: #d1dc80;
     size: 1em !important;
     margin: 0;
-  }
-  
-  .authlink {
+}
+
+.authlink {
     text-decoration: none;
     margin: 0 15px;
-    color: #c3bc63;
+    color: #d1dc80;
     font-weight: bold;
-  }
-  
-  .authlink:hover {
-    color: white;
-  }
+}
 
-  .nav-links {
+.authlink:hover {
+    color: white;
+}
+
+.nav-links {
     display: flex;
     flex-direction: row;
-  }
-  
-  .new-flower-index-link {
-    color: #c3bc63;
-  }
+}
 
-  .flower-links {
-    color: #c3bc63;
-  }
 
-  .view-users-flower-bed-link {
-    color: #c3bc63;
-  }
+/* ==================================================================================== */
+.flower-index-body {
+    background-image: url('https://i.imgur.com/IyB7V6W.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-  .members-name {
-    color: red;
-  }
+.flower-index-header {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 75px;
+}
 
-  .sign-in-page {
-    color: purple;
-  }
-  .sign-in-texts {
-    color: pink;
-  }
+.new-flower-index-link {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 205px;
+}
+.new-flower-index-link:hover {
+    color: blue;
+}
 
-  .sign-up-page{
-    background-color: pink;
-  }
+.flower-linksss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flower-index-links {
+    color: white;
+    font-size: 25px;
+    position:unset;
+    top: 225px;
+}
 
-  .sign-up-texts {
+.flower-index-links:hover {
+    color: blue;
+}
+
+.new-flower-body {
+    background-image: url('https://i.imgur.com/dQJ9RIh.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 250vw;
+    color: white;
+}
+
+.new-flower-header, .edit-page-header {
+    color: white;
+    font-size: 75px;
+}
+
+#new-flower-div, #edit-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-flower-label-texts {
     color: black;
-  }
+}
+
+.flower-texts-new-page, .flower-texts-edit-page {
+    font-family: 'Times New Roman', Times, serif;
+    width: 25em;
+
+}
+
+#add-flower-button, #submit-edit-button {
+    font-family: "Joti One", serif;
+    background-color: #ce9195;
+    margin: 20px 0 0 0;
+    font-size: 1.5em;
+    padding: 8px 5px 8px 5px;
+    border-radius: 5px;
+    width: 14.3em;
+    text-align: center;
+    color: black;
+
+}
+
+#add-flower-button:hover, #submit-edit-button:hover {
+    background-color: #483932;
+    color: white;
+}
+
+.flower-info-body{
+    background-image: url('https://i.imgur.com/WQ4VmEI.jpeg');
+    background-size: 900px 600px;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+#flower-info{
+    color: white;
+}
+
+.flower-name-header {
+    font-size: 50px;
+}
+
+#flower-actions {
+    display: inline;
+}
+
+#like-comment-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#likes-button{
+    margin-right: 10px;
+    font-size: 25px;
+
+}
+
+#likes-comments-count{
+    color: white;
+    font-size: 25px;
+
+}
+
+#comment-box-text {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+#add-comment-button {
+    font-family: "Joti One", serif;
+    font-size: 25px;
+    background-color: #485732;
+    color: white;
+    /* margin: 20px 0 0 0; */
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+#add-comment-button:hover {
+    background-color: #ad7445;
+    color: black;
+}
+
+#comment-text {
+    font-size: 20px;
+}
+
+.user-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#delete-comment-button {
+    font-size: 20px;
+    background-color: #485732;
+    color: white;
+    margin: 20px 0 0 0;
+    font-family: "Joti One", serif;
+    border-radius: 25px;
+}
+
+#delete-comment-button:hover {
+    background-color: #ad7445;
+    color: black;
+}
+
+#delete-flower-button, #edit-flower-button {
+    font-size: 20px;
+    background-color: #485732;
+    color: white;
+    margin: 20px 0 0 0;
+    font-family: "Joti One", serif;
+    border-radius: 25px;
+}
+
+#delete-flower-button:hover, #edit-flower-button:hover {
+    background-color: #ad7445;
+    color: black;
+}
+
+.fbc-index-body {
+    background-image: url('https://i.imgur.com/LO6yCia.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+.fbc-header {
+    font-size: 75px;
+}
+
+.members-name {
+    color: black;
+    font-size: 25px;
+}
+
+.view-users-flower-bed-link {
+    color: #c18dbc;
+    font-size: 25px;
+
+}
+
+.member-body {
+    background-image: url('https://i.imgur.com/RzdqAty.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+
+.member-page-header {
+    font-size: 75px;
+    color: white;
+}
+
+#members-flower-links {
+    font-size: 25px;
+    color: #c96e10!important;
+    text-decoration: none;
+}
+
+#members-flower-links:hover {
+    color: blue;
+}
+
+#members-flower-links:visited {
+    color: pink;
+}
+
+#sign-in-body {
+    background-image: url('https://i.imgur.com/jVWQOhJ.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+#sign-in-header {
+    color: black;
+    font-size: 75px;
+}
+
+.si-username-password-text {
+    color: black;
+    font-size: 25px;
+
+}
+.si-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.sign-in-button {
+    background-color: #8663a5;
+    font-size: 25px;
+    color: black;
+    margin: 20px 0 0 0;
+    font-family: "Joti One", serif;
+}
+
+.sign-in-button:hover {
+    background-color: #505f1d;
+    color: white;
+}
+
+.sign-up-body {
+    background-image: url('https://i.imgur.com/YIZunPj.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+.sign-up-header {
+    font-size: 75px;
+    color: white;
+}
+
+.su-username-password-texts {
+    color: white;
+    font-size: 25px;
+
+}
+.su-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.sign-up-button {
+    background-color: #beccac;
+    color: black;
+    margin: 0;
+    font-family: "Joti One", serif;
+    font-size: 20px;
+}
+
+.sign-up-button:hover {
+    background-color: #727127;
+    color: white;
+}
+
+.edit-flower-body {
+    background-image: url('https://i.imgur.com/m223VKw.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+
+.label-texts-edit-page {
+    font-size: 20px;
+    display: flex;
+}

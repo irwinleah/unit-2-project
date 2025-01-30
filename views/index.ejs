@@ -8,29 +8,27 @@
     <title>Home</title>
 </head>
 
+<%- include('./partials/_navbar') %>
+
 <body class="index-body">
-    <%- include('./partials/_navbar') %>
-    <div class="index-container">
-        <div class=text-container>
-        <h1 class="main-header">Welcome to Flower Bed</h1>
-        <p class="subheader">An app for collecting flowers</p>
+    <div id="index-container">
+        <div id="text-container">
+            <h1 class="main-header">Welcome to Flower Bed</h1>
+            <p class="subheader">An app for collecting flowers</p>
         </div>
-        <div class="auth-links">
-        <% if (user) { %>
-            <h2 class="second-header">Welcome, <%= user.username %>!</h2>
-            <!-- <p>
-                <a class="signout-link" href="/auth/sign-out">Sign Out</a>
-            </p> -->
-            <% } else { %>
-                <h2>Welcome Guest</h2>
-                <p>
-                    <a class="signup-link" href="/auth/sign-up">Sign Up</a> or
-                    <a class="signin-link" href="/aut/sign-in">Sign In</a>
-                </p>
+        <div id="auth-links">
+            <% if (user) { %>
+                <h2 class="second-header">Welcome, <%= user.username %>!</h2>
+                <% } else { %>
+                 <h2 class="guest-header">Welcome Guest</h2>
+                    <p>
+                        <a class="signup-link" href="/auth/sign-up">Sign Up</a> or
+                        <a class="signin-link" href="/aut/sign-in">Sign In</a>
+                    </p>
                 <% } %>
         </div>
     </div>
-    
+
 </body>
 
 </html>
