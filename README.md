@@ -7,8 +7,8 @@ https://irwinleah.github.io/unit-2-project/
 ## Flower Bed is a flower tracker community app. This app allows you to keep track of the flowers you see in the real world and allows you to post them to the online flower world. Other members are allowed top see, like and comment on your Flower Bed collection. I created this app because I photograph flowers as a hobby.
 
 <div id="header" align="center">
-  
-![Screenshot 2025-01-30 at 9 41 17 PM](https://github.com/user-attachments/assets/4fa9d141-bcac-4ccc-b259-be73c5e905fe)
+
+<img width="1507" alt="Screenshot 2025-01-31 at 9 18 42 AM" src="https://github.com/user-attachments/assets/324fa638-de74-4e92-bfd9-0550e0874056" />
 
 </div>
 
