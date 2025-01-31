@@ -27,6 +27,14 @@ body {
     height: 100%;
     width: 100%;
 }
+#fbc-index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 
 #text-container {
     width: 100%;
@@ -38,19 +46,20 @@ body {
     font-size: 75px;
     display: flex;
     align-items: flex-start;
+    margin-left: 100px;
 }
 
 .subheader {
-    margin: 0 20px 0 20px;
     font-size: 25px;
-    margin: 0;
+    margin-left: 100px;
 }
 
 #welcome-links {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-right: 100px;
+    margin: 0 50px, 0, 50px;
+    margin-right: 250px;
 }
 
 #auth-links {
@@ -179,6 +188,7 @@ body {
 
 .new-flower-label-texts {
     color: white;
+    font-size: 20px;
 }
 
 .flower-texts-new-page, .flower-texts-edit-page {
@@ -298,18 +308,19 @@ body {
     background-size: cover;
     background-position: 50% 25%;
     height: 100%;
-    min-height: 70vh;
     width: 100%;
     color: white;
 }
 
 .fbc-header {
     font-size: 75px;
+    margin: 40px 0 10px 0;
 }
 
 .members-name, .view-users-flower-bed-link {
     color: white;
     font-size: 25px;
+    margin: 5px 0 5px 0;
 }
 
 
@@ -427,7 +438,7 @@ body {
     background-image: url('https://i.imgur.com/m223VKw.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100%;
     width: 100vw;
     color: white;
 }
@@ -436,4 +447,5 @@ body {
 .label-texts-edit-page {
     font-size: 20px;
     display: flex;
+    color: white;
 }
