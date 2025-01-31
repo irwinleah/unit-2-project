@@ -10,19 +10,19 @@
 
 <%- include('../partials/_navbar') %>
 
-<body class="fbc-index-body">
-    <div id="fbc-index-container">
+    <body class="fbc-index-body">
+        <div id="fbc-index-container">
             <h1 class="fbc-header">Flower Bed Community</h1>
-        <div id="auth-links">
-            <% users.forEach(member => { %>
-                <p class="members-name">
-                    <%= member.username %>
-                </p>
+            <div id="auth-links">
+                <% users.forEach(member=> { %>
+                    <p class="members-name">
+                        <%= member.username %>
+                    </p>
                     <a class="view-users-flower-bed-link" href="/users/<%= member._id %>">View Flowers</a>
-            <% }) %>
+                    <% }) %>
+            </div>
         </div>
-    </div>
 
-</body>
+    </body>
 
 </html>

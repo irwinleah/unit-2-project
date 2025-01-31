@@ -10,25 +10,25 @@
 
 <%- include('./partials/_navbar') %>
 
-<body class="index-body">
-    <div id="index-container">
-        <div id="text-container">
-            <h1 class="main-header">Welcome to Flower Bed</h1>
-            <p class="subheader">An app for collecting flowers</p>
+    <body class="index-body">
+        <div id="index-container">
+            <div id="text-container">
+                <h1 class="main-header">Welcome to Flower Bed</h1>
+                <p class="subheader">An app for collecting flowers</p>
+            </div>
+            <div id="welcome-links">
+                <% if (user) { %>
+                    <h2 class="second-header">Welcome, <%= user.username %>!</h2>
+                    <% } else { %>
+                        <h2 class="guest-header"> Welcome Guest </h2>
+                        <p>
+                            <a class="signup-link" href="/auth/sign-up">Sign Up</a> or
+                            <a class="signin-link" href="/aut/sign-in">Sign In</a>
+                        </p>
+                        <% } %>
+            </div>
         </div>
-        <div id="welcome-links">
-            <% if (user) { %>
-                <h2 class="second-header">Welcome, <%= user.username %>!</h2>
-                <% } else { %>
-                 <h2 class="guest-header"> Welcome Guest  </h2>
-                    <p>
-                        <a class="signup-link" href="/auth/sign-up">Sign Up</a> or 
-                        <a class="signin-link" href="/aut/sign-in">Sign In</a>
-                    </p>
-                <% } %>
-        </div>
-    </div>
 
-</body>
+    </body>
 
 </html>

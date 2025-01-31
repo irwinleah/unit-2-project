@@ -10,17 +10,17 @@
 
 <%- include('../partials/_navbar') %>
 
-<body class="flower-index-body">
+    <body class="flower-index-body">
         <h1 class="flower-index-header">Welcome to My Flower Bed</h1>
         <a class="new-flower-index-link" href="/users/<%= user._id %>/flowers/new">New Flower</a>
         <div class="flower-linksss">
-        <% flowerBed.forEach(item=> { %>
+            <% flowerBed.forEach(item=> { %>
                 <a class="flower-index-links" href="/users/<%= user._id %>/flowers/<%= item._id %>">
                     <%= item.commonName %>
                 </a>
                 <% }) %>
         </div>
         <div></div>
-</body>
+    </body>
 
 </html>

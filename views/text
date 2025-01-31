@@ -1,8 +1,0 @@
-
-// Goes in User controller
-
-
-
-// goes into the flowers.show view
-// <% if (currentUser._id == user._id) { %>
-//     <% } %>

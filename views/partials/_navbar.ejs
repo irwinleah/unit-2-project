@@ -1,17 +1,17 @@
 <nav>
     <div class="navbar">
-    <% if(user) { %>
-        <div class="nav-links">
-            <a class="authlink" href="/">Home</a>
-            <a class="authlink" href="/auth/sign-out">Sign Out</a>
-            <a class="authlink" href="/users/<%=user._id%>/flowers">View my Flower Bed</a>
-            <a class="authlink" href="/users">Flower Bed Community</a>
-        </div>
-    <% } else { %>
-        <div class="nav-links">
-            <a class="authlink" href="/auth/sign-in">Sign In</a>
-            <a class="authlink" href="/auth/sign-up">Sign Up</a>
-        </div>
+        <% if(user) { %>
+            <div class="nav-links">
+                <a class="authlink" href="/">Home</a>
+                <a class="authlink" href="/auth/sign-out">Sign Out</a>
+                <a class="authlink" href="/users/<%=user._id%>/flowers">View my Flower Bed</a>
+                <a class="authlink" href="/users">Flower Bed Community</a>
+            </div>
+            <% } else { %>
+                <div class="nav-links">
+                    <a class="authlink" href="/auth/sign-in">Sign In</a>
+                    <a class="authlink" href="/auth/sign-up">Sign Up</a>
+                </div>
     </div>
     <% } %>
 </nav>

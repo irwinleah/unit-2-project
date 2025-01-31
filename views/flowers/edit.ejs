@@ -5,37 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Editing <%= flower.commonName %></title>
+    <title>Editing <%= flower.commonName %>
+    </title>
 </head>
 
 <%- include('../partials/_navbar') %>
 
-<body class="edit-flower-body">
+    <body class="edit-flower-body">
 
         <h1 class="edit-page-header">Edit <%= flower.commonName %>
         </h1>
-    <div id="edit-div">
-        <form action="/users/<%= user._id %>/flowers/<%= flower._id %>?_method=PUT" method="POST">
-            <label class="label-texts-edit-page" for="name">Common Name:</label>
-            <input class="flower-texts-edit-page" type="text" name="commonName" id="commonName" value="<%= flower.commonName %>" />
-            <label class="label-texts-edit-page" for="name">Scientific Name:</label>
-            <input class="flower-texts-edit-page" type="text" name="scientificName" id="scientificName" value="<%= flower.scientificName %>" />
-            <label class="label-texts-edit-page" for="name">Date Found:</label>
-            <input class="flower-texts-edit-page" type="date" name="dateFound" id="dateFound"
-                value="<%= flower.dateFound.toISOString().slice(0, 10) %>" />
-            <label class="label-texts-edit-page" for="name">Location:</label>
-            <input class="flower-texts-edit-page" type="text" name="location" id="location" value="<%= flower.location %>" />
-            <label class="label-texts-edit-page" for="name">Field Notes:</label>
-            <input class="flower-texts-edit-page" type="text" name="fieldNotes" id="fieldNotes" value="<%= flower.fieldNotes %>" />
-            <label class="label-texts-edit-page" for="name">Photo:</label>
-            <input class="flower-texts-edit-page" type="text" name="photo" id="photo" value="<%= flower.photo %>" />
-        <div>
-            <button id="submit-edit-button" type="submit">Edit Flower</button>
+        <div id="edit-div">
+            <form action="/users/<%= user._id %>/flowers/<%= flower._id %>?_method=PUT" method="POST">
+                <label class="label-texts-edit-page" for="name">Common Name:</label>
+                <input class="flower-texts-edit-page" type="text" name="commonName" id="commonName"
+                    value="<%= flower.commonName %>" />
+                <label class="label-texts-edit-page" for="name">Scientific Name:</label>
+                <input class="flower-texts-edit-page" type="text" name="scientificName" id="scientificName"
+                    value="<%= flower.scientificName %>" />
+                <label class="label-texts-edit-page" for="name">Date Found:</label>
+                <input class="flower-texts-edit-page" type="date" name="dateFound" id="dateFound"
+                    value="<%= flower.dateFound.toISOString().slice(0, 10) %>" />
+                <label class="label-texts-edit-page" for="name">Location:</label>
+                <input class="flower-texts-edit-page" type="text" name="location" id="location"
+                    value="<%= flower.location %>" />
+                <label class="label-texts-edit-page" for="name">Field Notes:</label>
+                <input class="flower-texts-edit-page" type="text" name="fieldNotes" id="fieldNotes"
+                    value="<%= flower.fieldNotes %>" />
+                <label class="label-texts-edit-page" for="name">Photo:</label>
+                <input class="flower-texts-edit-page" type="text" name="photo" id="photo" value="<%= flower.photo %>" />
+                <div>
+                    <button id="submit-edit-button" type="submit">Edit Flower</button>
+                </div>
+            </form>
         </div>
-        </form>
-    </div>
 
 
-</body>
+    </body>
 
 </html>

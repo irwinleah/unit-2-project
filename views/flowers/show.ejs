@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title><%= item.commonName %></title>
+    <title>
+        <%= item.commonName %>
+    </title>
 </head>
 
 <%- include('../partials/_navbar') %>
 
-<body class="flower-info-body">
-    <div id="flower-info">
-        <div id="text-container"></div>
-            <h1 class="flower-name-header"><%= item.commonName %></h1>
+    <body class="flower-info-body">
+        <div id="flower-info">
+            <div id="text-container"></div>
+            <h1 class="flower-name-header">
+                <%= item.commonName %>
+            </h1>
             <div id="flower-facts">
                 <p>Scientific Name:
                     <%= item.scientificName %>
@@ -31,61 +35,63 @@
                     <%= item.photo %>
                 </p>
             </div>
-    </div>
-    <div id="flower-actions">
-        <div id="like-comment-section">
-            <form action="/users/<%= member._id %>/flowers/<%= item._id %>/like" method="POST">
-                <button id="likes-button" type="submit">
-                    <img height="20px" src="<%= item.likes.includes(user._id) ? "/icons/heart.png" : "/icons/empty-heart.png" %>"/>
-                </button>
-            </form>
-            
-            <form action="/users/<%= member._id %>/flowers/<%= item._id %>/comment" method="POST">
-                   <input id="comment-box-text" name="text" />
-                <button id="add-comment-button" type="submit">Add Comment</button>
-            </form>
         </div>
-        <div id="likes-comments-count">
-            <span>
-                <%= item.likes.length %>
-            </span> Likes
+        <div id="flower-actions">
+            <div id="like-comment-section">
+                <form action="/users/<%= member._id %>/flowers/<%= item._id %>/like" method="POST">
+                    <button id="likes-button" type="submit">
+                        <img height="20px" src="<%= item.likes.includes(user._id) ? " /icons/heart.png"
+                            : "/icons/empty-heart.png" %>"/>
+                    </button>
+                </form>
+
+                <form action="/users/<%= member._id %>/flowers/<%= item._id %>/comment" method="POST">
+                    <input id="comment-box-text" name="text" />
+                    <button id="add-comment-button" type="submit">Add Comment</button>
+                </form>
+            </div>
+            <div id="likes-comments-count">
+                <span>
+                    <%= item.likes.length %>
+                </span> Likes
                 <span>
                     <%= item.commentBox.length %>
                 </span> Comments
-        </div>
-        <% comments.forEach(comment=> { %>
-            <div id="comment-text">
-                <p>
-                    <%= comment.user.username %> Says:
-                </p>
-                <p>
-                    <%= comment.text %>
-                </p>
-            <div id="buttons">
-                <% if (comment.user._id==user._id) { %>
-                    <form
-                        action="/users/<%= member._id %>/flowers/<%= item._id %>/comment/<%= comment._id %>?_method=DELETE"
-                        method="POST">
-                        <button id="delete-comment-button" type="submit">Delete Comment</button>
-                    </form>
-                    <% } %>
             </div>
-            <% }) %>
-            <div class="user-actions">
-                <% if (user._id==member._id) { %>
-                    <form action="/users/<%= user._id %>/flowers/<%= item._id %>?_method=DELETE" method="POST">
-                        <button id="delete-flower-button" type="submit">Delete Flower</button>
-                    </form>
-                    <a href="/users/<%= user._id %>/flowers/<%= item._id %>/edit">
-                        <button id="edit-flower-button">Edit Flower</button>
-                    </a>
+            <% comments.forEach(comment=> { %>
+                <div id="comment-text">
+                    <p>
+                        <%= comment.user.username %> Says:
+                    </p>
+                    <p>
+                        <%= comment.text %>
+                    </p>
+                    <div id="buttons">
+                        <% if (comment.user._id==user._id) { %>
+                            <form
+                                action="/users/<%= member._id %>/flowers/<%= item._id %>/comment/<%= comment._id %>?_method=DELETE"
+                                method="POST">
+                                <button id="delete-comment-button" type="submit">Delete Comment</button>
+                            </form>
+                            <% } %>
+                    </div>
+                    <% }) %>
+                        <div class="user-actions">
+                            <% if (user._id==member._id) { %>
+                                <form action="/users/<%= user._id %>/flowers/<%= item._id %>?_method=DELETE"
+                                    method="POST">
+                                    <button id="delete-flower-button" type="submit">Delete Flower</button>
+                                </form>
+                                <a href="/users/<%= user._id %>/flowers/<%= item._id %>/edit">
+                                    <button id="edit-flower-button">Edit Flower</button>
+                                </a>
+                        </div>
                 </div>
-            </div>
-                    <% } %>
-    </div>
+                <% } %>
+        </div>
 
 
 
-</body>
+    </body>
 
 </html>

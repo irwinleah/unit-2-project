@@ -27,6 +27,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
 #fbc-index-container {
     display: flex;
     flex-direction: column;
@@ -83,7 +84,8 @@ body {
     color: black;
 }
 
-.signup-link:hover, .signin-link:hover {
+.signup-link:hover,
+.signin-link:hover {
     background-color: #8c475b;
     color: white;
 }
@@ -147,6 +149,7 @@ body {
     position: absolute;
     top: 205px;
 }
+
 .new-flower-index-link:hover {
     color: white;
 }
@@ -156,10 +159,11 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .flower-index-links {
     color: pink;
     font-size: 25px;
-    position:unset;
+    position: unset;
     top: 225px;
 }
 
@@ -176,12 +180,14 @@ body {
     color: white;
 }
 
-.new-flower-header, .edit-page-header {
+.new-flower-header,
+.edit-page-header {
     color: white;
     font-size: 75px;
 }
 
-#new-flower-div, #edit-div {
+#new-flower-div,
+#edit-div {
     display: flex;
     flex-direction: column;
 }
@@ -191,13 +197,15 @@ body {
     font-size: 20px;
 }
 
-.flower-texts-new-page, .flower-texts-edit-page {
+.flower-texts-new-page,
+.flower-texts-edit-page {
     font-family: 'Times New Roman', Times, serif;
     width: 25em;
 }
 
-#add-flower-button, #submit-edit-button {
-    font-size:  1.25em;
+#add-flower-button,
+#submit-edit-button {
+    font-size: 1.25em;
     background-color: #ce9195;
     text-decoration: none;
     padding: 8px 5px 8px 5px;
@@ -210,12 +218,13 @@ body {
 
 }
 
-#add-flower-button:hover, #submit-edit-button:hover {
+#add-flower-button:hover,
+#submit-edit-button:hover {
     background-color: #483932;
     color: white;
 }
 
-.flower-info-body{
+.flower-info-body {
     background-image: url('https://i.imgur.com/WQ4VmEI.jpeg');
     background-size: 900px 600px;
     min-height: 100vh;
@@ -250,13 +259,14 @@ body {
     justify-content: center;
     align-content: center;
 }
-#likes-button{
+
+#likes-button {
     margin-right: 10px;
     font-size: 25px;
 
 }
 
-#likes-comments-count{
+#likes-comments-count {
     color: white;
     font-size: 25px;
 
@@ -281,11 +291,11 @@ body {
     margin: 10px;
 }
 
-#delete-flower-button, 
+#delete-flower-button,
 #edit-flower-button,
 #delete-comment-button,
 #add-comment-button {
-    font-size:  1.25em;
+    font-size: 1.25em;
     background-color: #485732;
     text-decoration: none;
     padding: 8px 5px 8px 5px;
@@ -294,8 +304,8 @@ body {
     border-radius: 5px;
 }
 
-#delete-flower-button:hover, 
-#edit-flower-button:hover, 
+#delete-flower-button:hover,
+#edit-flower-button:hover,
 #delete-comment-button:hover,
 #add-comment-button:hover {
     background-color: #ad7445;
@@ -317,7 +327,8 @@ body {
     margin: 40px 0 10px 0;
 }
 
-.members-name, .view-users-flower-bed-link {
+.members-name,
+.view-users-flower-bed-link {
     color: white;
     font-size: 25px;
     margin: 5px 0 5px 0;
@@ -375,6 +386,7 @@ body {
     font-size: 25px;
 
 }
+
 .si-text {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -415,10 +427,12 @@ body {
     font-size: 25px;
 
 }
+
 .su-text {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+
 .sign-up-button {
     background-color: #beccac;
     color: black;
