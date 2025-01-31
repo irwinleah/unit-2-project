@@ -11,17 +11,18 @@
 <%- include('../partials/_navbar') %>
 
 <body class="member-body">
+    <div id="index-container">
         <h1 class="member-page-header">
-            <%= member.username %>'s Flower Bed
-        </h1>
+                <%= member.username %>'s Flower Bed
+            </h1>
         <div id="members-flower-links">
-        <% member.flowerBed.forEach(item=> { %>
-                <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
+            <% member.flowerBed.forEach(item=> { %>
+                <a class="member-flower-link-text" href="/users/<%= member._id %>/flowers/<%= item._id %>">
                     <%= item.commonName %>
                 </a>
-                <% }) %>
-            </div>
-            <div></div>
+            <% }) %>
+        </div>
+    </div>
 
 </body>
 

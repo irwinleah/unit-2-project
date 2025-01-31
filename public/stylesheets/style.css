@@ -35,13 +35,15 @@ body {
 .main-header {
     font-weight: bold;
     color: white;
-    font-size: 5.6em;
-    /* margin: -300px 20px 0 20px; */
+    font-size: 75px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .subheader {
     margin: 0 20px 0 20px;
-    font-size: 1.4em;
+    font-size: 25px;
+    margin: 0;
 }
 
 #welcome-links {
@@ -84,11 +86,10 @@ body {
     padding: 5px 20px;
     justify-content: space-between;
     align-content: flex-start;
-    text-decoration: underline;
 }
 
 #nav-header {
-    color: #d1dc80;
+    color: black;
     size: 1em !important;
     margin: 0;
 }
@@ -96,8 +97,9 @@ body {
 .authlink {
     text-decoration: none;
     margin: 0 15px;
-    color: #d1dc80;
+    color: pink;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .authlink:hover {
@@ -116,28 +118,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .flower-index-header {
     color: white;
-    font-size: 50px;
-    position: absolute;
+    font-size: 75px;
     top: 75px;
 }
 
 .new-flower-index-link {
-    color: white;
+    color: pink;
     font-size: 25px;
     position: absolute;
     top: 205px;
 }
 .new-flower-index-link:hover {
-    color: blue;
+    color: white;
 }
 
 .flower-linksss {
@@ -146,22 +148,22 @@ body {
     align-items: center;
 }
 .flower-index-links {
-    color: white;
+    color: pink;
     font-size: 25px;
     position:unset;
     top: 225px;
 }
 
 .flower-index-links:hover {
-    color: blue;
+    color: white;
 }
 
 .new-flower-body {
     background-image: url('https://i.imgur.com/dQJ9RIh.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    width: 250vw;
+    height: 100%;
+    width: 100%;
     color: white;
 }
 
@@ -176,25 +178,25 @@ body {
 }
 
 .new-flower-label-texts {
-    color: black;
+    color: white;
 }
 
 .flower-texts-new-page, .flower-texts-edit-page {
     font-family: 'Times New Roman', Times, serif;
     width: 25em;
-
 }
 
 #add-flower-button, #submit-edit-button {
-    font-family: "Joti One", serif;
+    font-size:  1.25em;
     background-color: #ce9195;
-    margin: 20px 0 0 0;
-    font-size: 1.5em;
+    text-decoration: none;
     padding: 8px 5px 8px 5px;
+    color: white;
+    font-family: "Joti One", serif;
     border-radius: 5px;
-    width: 14.3em;
-    text-align: center;
-    color: black;
+    margin: 20px 0 0 100px;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -214,10 +216,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 }
-/* 
-#flower-info{
-    color: white;
-} */
+
 #flower-facts {
     display: flex;
     flex-direction: column;
@@ -307,7 +306,7 @@ body {
 }
 
 .members-name, .view-users-flower-bed-link {
-    color: black;
+    color: white;
     font-size: 25px;
 }
 
@@ -328,17 +327,20 @@ body {
 
 #members-flower-links {
     font-size: 25px;
-    color: #c96e10!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
 }
 
-#members-flower-links:hover {
-    color: blue;
-}
-
-#members-flower-links:visited {
+.member-flower-link-text {
     color: pink;
 }
+
+.member-flower-link-text:hover {
+    color: white;
+}
+
 
 #sign-in-body {
     background-image: url('https://i.imgur.com/jVWQOhJ.jpeg');

@@ -13,7 +13,7 @@
 <body class="new-flower-body">
 
         <h1 class="new-flower-header">Add A New Flower</h1>
-
+    <div id="new-div">
         <form id="new-flower-div" action="/users/<%= user._id %>/flowers/" method="POST">
             <label class="new-flower-label-texts" for="name">Common Name:</label>
             <input class="flower-texts-new-page" type="text" name="commonName" id="commonName" />
@@ -27,8 +27,11 @@
             <input class="flower-texts-new-page" type="text" name="fieldNotes" id="fieldNotes" />
             <label class="new-flower-label-texts" for="name">Photo:</label>
             <input class="flower-texts-new-page" type="text" name="photo" id="photo" />
+        <div>
             <button id="add-flower-button" type="submit">Add Flower</button>
-
+        </div>
+        </form>
+    </div>
 </body>
 
 </html>
