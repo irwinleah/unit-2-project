@@ -12,24 +12,25 @@
 
 <body class="flower-info-body">
     <div id="flower-info">
-        <h1 class="flower-name-header">
-            <%= item.commonName %>
-        </h1>
-        <p>Scientific Name:
-            <%= item.scientificName %>
-        </p>
-        <p>Date Found:
-            <%= item.dateFound.toString().slice(0, 15) %>
-        </p>
-        <p>Location:
-            <%= item.location %>
-        </p>
-        <p>Field Notes:
-            <%= item.fieldNotes %>
-        </p>
-        <p>Photo:
-            <%= item.photo %>
-        </p>
+        <div id="text-container"></div>
+            <h1 class="flower-name-header"><%= item.commonName %></h1>
+            <div id="flower-facts">
+                <p>Scientific Name:
+                    <%= item.scientificName %>
+                </p>
+                <p>Date Found:
+                    <%= item.dateFound.toString().slice(0, 15) %>
+                </p>
+                <p>Location:
+                    <%= item.location %>
+                </p>
+                <p>Field Notes:
+                    <%= item.fieldNotes %>
+                </p>
+                <p>Photo:
+                    <%= item.photo %>
+                </p>
+            </div>
     </div>
     <div id="flower-actions">
         <div id="like-comment-section">

@@ -14,13 +14,14 @@
         <h1 class="member-page-header">
             <%= member.username %>'s Flower Bed
         </h1>
+        <div id="members-flower-links">
         <% member.flowerBed.forEach(item=> { %>
-            <div id="members-flower-links">
                 <a href="/users/<%= member._id %>/flowers/<%= item._id %>">
                     <%= item.commonName %>
                 </a>
+                <% }) %>
             </div>
-            <% }) %>
+            <div></div>
 
 </body>
 

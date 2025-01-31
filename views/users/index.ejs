@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Flower Bed Community Members</title>
+    <title>Home</title>
 </head>
-
 
 <%- include('../partials/_navbar') %>
 
 <body class="fbc-index-body">
-        <h1 class="fbc-header">Flower Bed Community</h1>
-        <% users.forEach(member=> { %>
-            <p class="members-name">
-                <%= member.username %>
-            </p>
-            <a class="view-users-flower-bed-link" href="/users/<%= member._id %>">View Flower Bed</a>
+    <div id="index-container">
+            <h1 class="fbc-header">Flower Bed Community</h1>
+        <div id="auth-links">
+            <% users.forEach(member => { %>
+                <p class="members-name">
+                    <%= member.username %>
+                </p>
+                    <a class="view-users-flower-bed-link" href="/users/<%= member._id %>">View Flowers</a>
             <% }) %>
+        </div>
+    </div>
+
 </body>
 
 </html>
