@@ -4,20 +4,27 @@
 
 https://irwinleah.github.io/unit-2-project/
 
-## Flower Bed is a flower tracker community app. This app allows you to keep track of the flowers you see in the real world and allows you to post them to the online flower world. Other members are allowed top see, like and comment on your Flower Bed collection 
+## Flower Bed is a flower tracker community app. This app allows you to keep track of the flowers you see in the real world and allows you to post them to the online flower world. Other members are allowed top see, like and comment on your Flower Bed collection. I created this app because I photograph flowers as a hobby.
 
 <div id="header" align="center">
-
+  
+![Screenshot 2025-01-30 at 9 41 17 PM](https://github.com/user-attachments/assets/4fa9d141-bcac-4ccc-b259-be73c5e905fe)
 
 </div>
 
-## How to Use Flower Bed:
+## How to Use the Flower Bed App:
 
 <details open>
 <summary> Instructions </summary>
 
-1. ghfjwedkql
-2. cfghvjb
+1. Create a profile via the sign-up page
+2. In your Flower Bed, you can add flowers and provide details of each flower (common name and date are the only required inputs to add a flower)
+3. You can always edit or delete your flower later on
+4. You are able to see, like and comment on our member's flowers in their Flower Bed, as they can to your flowers
+5. Sign up it's free!
+
+## Attributions:
+The following photos were taken by yours truly, Leah Irwin
 
 ## Technologies Used:
 
@@ -25,9 +32,7 @@ Javasript, HTML, CSS, EJS
 
 ## Next Steps:
 
-1. Upload more than one photo
-2. Allow anonymous commenting
-
-Screenshot/Logo: A screenshot of your app or a logo.
-Your app’s name: Include a description of your app and its functionality. Background info about the app and why you built it is a nice touch.
-Getting started: Include a link to your deployed app and a link to your planning materials.
+1. Have the photo submission pull a photo up rather than just a link
+2. Upload more than one photo for each flower
+3. Allow anonymous commenting
+4. Flower cursor
